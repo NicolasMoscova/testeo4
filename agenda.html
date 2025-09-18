@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Agenda</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <div class="brand">Agenda Virtual</div>
+      <nav>
+        <a href="index.html" class="link">Inicio</a>
+        <button id="btnLogout" class="btn small">Cerrar sesión</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container grid">
+    <section class="card">
+      <h3>Reservar turno</h3>
+      <form id="formReserva" class="form">
+        <label>Fecha<input id="fechaReserva" type="date" required></label>
+        <label>Hora<input id="horaReserva" type="time" required></label>
+        <label>Servicio
+          <select id="servicio">
+            <option value="Cortes">Cortes</option>
+            <option value="Barba">Barba</option>
+            <option value="Coloración">Coloración</option>
+          </select>
+        </label>
+        <div class="row">
+          <button class="btn" type="submit">Reservar</button>
+          <button id="btnCheck" class="btn outline" type="button">Ver horarios ocupados</button>
+        </div>
+      </form>
+      <div id="msg" class="muted"></div>
+    </section>
+
+    <section class="card" id="panelTurnos">
+      <h3>Mis reservas</h3>
+      <ul id="misTurnos" class="list"></ul>
+    </section>
+
+    <section class="card" id="panelAdmin" style="display:none">
+      <h3>Panel Administrador</h3>
+      <div id="adminActions" class="row">
+        <button id="btnExport" class="btn">Exportar turnos</button>
+        <button id="btnClear" class="btn outline">Borrar todos</button>
+      </div>
+      <ul id="todosTurnos" class="list"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+:root{--accent:#1f6feb;--bg:#f4f7fb;--card:#ffffff;--muted:#586375;--radius:12px;--container:1100px}
+*{box-sizing:border-box}html,body{height:100%}body{margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial;background:var(--bg);color:#0b1220}
+.container{max-width:var(--container);margin:0 auto;padding:20px}
+.center{display:flex;flex-direction:column;align-items:center;justify-content:center;height:70vh;text-align:center}
+.auth-box{max-width:380px;margin:auto;margin-top:10vh;text-align:center}
+.card{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(12,22,40,0.06);margin:12px}
+.lead{color:var(--muted)}
+.actions{display:flex;gap:12px;margin-top:12px;justify-content:center}
+.btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;border:none;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.small{padding:6px 10px;font-size:14px}
+.btn.outline{background:transparent;color:var(--accent);border:1px solid rgba(31,111,235,0.12)}
+.form{display:flex;flex-direction:column;gap:10px}
+.form input,.form select{padding:10px;border-radius:10px;border:1px solid #e6edf3}
+.muted{color:var(--muted);font-size:14px}
+.topbar{background:#fff;padding:10px 0;border-bottom:1px solid #edf2f7;box-shadow:0 6px 20px rgba(12,22,40,0.03)}
+.topbar .container{display:flex;justify-content:space-between;align-items:center}
+.brand{color:var(--accent);font-weight:700}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding-top:18px}
+.list{list-style:none;padding:0;margin:0;max-height:380px;overflow:auto}
+.list li{display:flex;justify-content:space-between;align-items:center;padding:10px;border-bottom:1px solid #f1f5f9}
+.row{display:flex;gap:8px;align-items:center}
+.link{color:var(--muted);text-decoration:none;margin-right:12px}
+.small-btn{background:transparent;border:none;color:#e11d48;cursor:pointer;padding:6px;border-radius:6px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}.center{height:auto;padding:60px 10px}}
+
+/* Añadido por el asistente: centrar formularios de auth */
+.auth-wrapper{min-height:calc(100vh - 40px);display:flex;align-items:center;justify-content:center;padding:20px;background:transparent;}
+.auth-box{max-width:420px;width:100%;margin:10px;border-radius:12px;padding:24px;background:#fff;box-shadow:0 8px 30px rgba(12,22,40,0.06);}
+@media(max-width:900px){.auth-wrapper{padding:20px}}
+
+
+/* Añadido para forzar centrado (especificidad alta) */
+.auth-wrapper{min-height:calc(100vh - 40px) !important;display:flex !important;align-items:center !important;justify-content:center !important;padding:20px !important;}
+.auth-box{max-width:420px !important;width:100% !important;margin:0 auto !important;padding:24px !important;}
